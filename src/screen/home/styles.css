@@ -1,0 +1,40 @@
+.header-filter-wrapper {
+  border-bottom: 1px solid #E3ECEE;
+}
+
+.header-button-wrapper {
+  clear: both;
+}
+
+.header-left-wrapper {
+  float: left;
+}
+
+.header-right-wrapper {
+  float: right;
+}
+
+.header-item-wrapper {
+  display: inline-block;
+}
+
+.advanced-filter-text {
+  color: #51CDFB;
+  font-size: 17px;
+  padding: 15px 0;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.title-group {
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.title-group-help {
+  display: inline-block;
+}
