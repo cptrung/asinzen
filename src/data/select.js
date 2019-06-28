@@ -1,3 +1,9 @@
+export const PRESETS = [
+  {id: 0, title: `Select a Preset`},
+  {id: 1, title: 'Low Barrier to Entry'},
+  {id: 2, title: 'Quick Wins'}
+]
+
 export const SALE_PATTERN = [
   { id: 1, title: 'Up & Coming' },
   { id: 2, title: 'Typical' },

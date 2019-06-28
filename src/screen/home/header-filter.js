@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash'
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
@@ -11,6 +12,10 @@ import InputBase from '@material-ui/core/InputBase';
 
 import './styles.css'
 import * as Colors from './../../theme/color'
+
+import {
+  PRESETS
+} from './../../data'
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -81,19 +86,29 @@ const BootstrapInput = withStyles(theme => ({
 
 const HeaderLeft = props => {
   const classes = useStyles();
+  const handleChange = name => event => {
+    const value = event.target.value;
+    props.handleChange && props.handleChange(name, value);
+  };
+
+  const currentPreset = props.data && props.data.preset;
+
   return (
     <div className="header-left-wrapper">
       <div className="header-item-wrapper">
         <Select
-          value={0}
-          // onChange={handleChange}
-          input={<BootstrapInput name="age" id="age-customized-select" />}
+          value={currentPreset}
+          onChange={handleChange('preset')}
+          input={<BootstrapInput name="preset" id="preset-select" />}
         >
-          <MenuItem value="0">
-            <em>Select a Preset</em>
-          </MenuItem>
-          <MenuItem value={10}>Low Barrier to Entry</MenuItem>
-          <MenuItem value={20}>Quick Wins</MenuItem>
+          {
+            _.map(PRESETS, (item) => {
+              if (item.id == 0)
+                return <MenuItem value={item.id}><em>{item.title}</em></MenuItem>
+              else
+                return <MenuItem value={item.id}>{item.title}</MenuItem>
+            })
+          }
         </Select>
       </div>
       <div className="header-item-wrapper">

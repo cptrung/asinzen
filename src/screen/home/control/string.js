@@ -13,12 +13,10 @@ export const InputControl = (props) => {
   const classes = useStyles();
   return (
     <TextField
-      id="standard-bare"
       className={classes.textField}
       placeholder="Keyword Phrase"
       margin="normal"
       fullWidth
-      inputProps={{ 'aria-label': 'bare' }}
     />
   )
 }

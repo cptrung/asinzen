@@ -13,12 +13,11 @@ export const ChipControl = (props) => {
   const classes = useStyles();
   return (
     <TextField
-      id="standard-bare"
+      id="chip"
       className={classes.textField}
       placeholder="Keyword Phrase"
       margin="normal"
       fullWidth
-      inputProps={{ 'aria-label': 'bare' }}
     />
   )
 }

@@ -23,12 +23,11 @@ export const NumberInputControl = (props) => {
     <Grid container spacing={0}>
       <Grid item xs={12} sm={5}>
         <TextField
-          id="standard-bare"
+          id="min"
           className={classes.textField}
           placeholder="Min"
           margin="normal"
           fullWidth
-          inputProps={{ 'aria-label': 'bare' }}
         />
       </Grid>
       <Grid item xs={12} sm={1}>
@@ -36,12 +35,11 @@ export const NumberInputControl = (props) => {
       </Grid>
       <Grid item xs={12} sm={5}>
         <TextField
-          id="standard-bare"
+          id="max"
           className={classes.textField}
           placeholder="Max"
           margin="normal"
           fullWidth
-          inputProps={{ 'aria-label': 'bare' }}
         />
       </Grid>
     </Grid>

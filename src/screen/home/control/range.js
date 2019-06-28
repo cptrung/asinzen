@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 });
 
 function valuetext(value) {
-  return `${value}°C`;
+  return `${value}`;
 }
 
 export const RangeControl = (props) => {
@@ -43,7 +43,6 @@ export const RangeControl = (props) => {
             value={value}
             onChange={handleChange}
             valueLabelDisplay="auto"
-            aria-labelledby="range-slider"
             getAriaValueText={valuetext}
             className={classes.slider}
             fullWidth

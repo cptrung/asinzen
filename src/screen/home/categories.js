@@ -50,6 +50,9 @@ const Item = ({
           />
         }
         label={item.title}
+        style={{
+          color: isSelected ? Colors.primary : 'black',
+        }}
       />
     </Grid>
   )

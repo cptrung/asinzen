@@ -19,7 +19,7 @@ export class Filter extends Component {
       case 'select':
         return <SelectControl items={items} />
       case 'range':
-          return <RangeControl />
+        return <RangeControl />
       default:
         break;
     }
